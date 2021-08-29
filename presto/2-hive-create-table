@@ -11,6 +11,9 @@ LOCATION 's3://optum-emr-lesson/presto/';
 
 --------------------
 
+# Run command on EMR
+- presto-cli --catalog hive 
+
 CREATE SCHEMA nyc_taxi_text WITH (LOCATION = 's3a://nycdataset/nyc_text.db');
 
 CREATE TABLE hive.nyc_taxi_text.tlc_yellow_trips_2018 (

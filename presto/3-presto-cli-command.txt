@@ -1,2 +1,7 @@
 #presto-cli –catalog hive –schema prestodemo
 presto-cli –catalog hive –schema emrDemo
+ 
+----
+
+presto-cli –catalog hive –schema nyc_taxi_text
+
