@@ -1,1 +1,2 @@
-presto-cli –catalog hive –schema prestodemo
+#presto-cli –catalog hive –schema prestodemo
+presto-cli –catalog hive –schema emrDemo

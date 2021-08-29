@@ -8,3 +8,29 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ' '
 LINES TERMINATED BY '\n'
 LOCATION 's3://optum-emr-lesson/presto/';
+
+--------------------
+
+CREATE SCHEMA nyc_taxi_text WITH (LOCATION = 's3a://nycdataset/nyc_text.db');
+
+CREATE TABLE hive.nyc_taxi_text.tlc_yellow_trips_2018 (
+    vendorid VARCHAR,
+    tpep_pickup_datetime VARCHAR,
+    tpep_dropoff_datetime VARCHAR,
+    passenger_count VARCHAR,
+    trip_distance VARCHAR,
+    ratecodeid VARCHAR,
+    store_and_fwd_flag VARCHAR,
+    pulocationid VARCHAR,
+    dolocationid VARCHAR,
+    payment_type VARCHAR,
+    fare_amount VARCHAR,
+    extra VARCHAR,
+    mta_tax VARCHAR,
+    tip_amount VARCHAR,
+    tolls_amount VARCHAR,
+    improvement_surcharge VARCHAR,
+    total_amount VARCHAR)
+WITH (FORMAT = 'CSV',
+    EXTERNAL_LOCATION = 's3://nycdataset/')
+;

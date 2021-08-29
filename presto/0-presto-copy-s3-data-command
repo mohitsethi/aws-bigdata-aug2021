@@ -1,1 +1,10 @@
 aws s3 cp s3://support.elasticmapreduce/training/datasets/wikistats/ s3://<YOUR_S3_BUCKET>/ --recursive
+
+# NewYork Tax datasets
+Link: https://data.cityofnewyork.us/Transportation/2018-Yellow-Taxi-Trip-Data/t29m-gskq
+
+- curl -O https://data.cityofnewyork.us/api/views/t29m-gskq/rows.csv?accessType=DOWNLOAD
+- mkdir dataset
+- mv rows.csv dataset/
+# Uplaod rows.csv to S3
+- aws s3 cp ./dataset/ s3://nycdataset/ --recursive

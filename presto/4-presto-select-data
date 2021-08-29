@@ -11,3 +11,8 @@ WHERE language = 'en'
 GROUP BY language, page_title
 ORDER BY avg_hits DESC
 LIMIT 10;
+
+
+-----
+
+SELECT * FROM nyc_taxi_text.tlc_yellow_trips_2018 LIMIT 10;
