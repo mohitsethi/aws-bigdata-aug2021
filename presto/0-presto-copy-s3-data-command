@@ -10,4 +10,3 @@ Link: https://data.cityofnewyork.us/Transportation/2018-Yellow-Taxi-Trip-Data/t2
 # Uplaod rows.csv to S3
 - aws s3 cp ./dataset/ s3://nycdataset/ --recursive
 - aws s3 cp s3://nycdataset/ s3://nycdataset/ --recursive
-
